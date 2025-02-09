@@ -1,3 +1,9 @@
+---
+import "../styles/global.css";
+import '@fontsource-variable/josefin-sans';
+import background from "../assets/background.svg";
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,7 +13,8 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Portafolio Isaac Rojas</title>
 	</head>
-	<body>
+	<body class="font-josefin p-12 max-sm:px-3 max-sm:py-6">
+		<img class="fixed inset-0 -z-1 w-full h-full" src={background.src} alt="" />
 		<slot />
 	</body>
 </html>

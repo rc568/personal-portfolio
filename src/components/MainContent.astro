@@ -1,0 +1,24 @@
+---
+import ProjectArticle from "./ProjectArticle/ProjectArticle.astro";
+import Technologies from "./Technologies/Technologies.astro";
+import ProjectGrid from "../components/ProjectGrid/ProjectGrid.astro";
+import { education, experiencia } from "../utils/info";
+
+import Contact from "./Contact.astro";
+import Footer from "./Footer.astro";
+---
+
+<div class="mx-auto w-2xl max-md:min-w-xs max-md:w-auto">
+    <h1 class="text-2xl font-josefin font-semibold">Isaac Rojas</h1>
+    <p class="text-base">
+        Soy bachiller en Ingeniería Electrónica.
+        <br />
+        Actualmente me dedicó al desarrollo web Full-Stack.
+    </p>
+    <Technologies />
+    <ProjectArticle title={"Educación"} articles={education} />
+    <ProjectArticle title={"Experiencia"} articles={experiencia} />
+    <ProjectGrid />
+    <Contact />
+    <Footer />
+</div>

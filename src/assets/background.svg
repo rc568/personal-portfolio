@@ -1,6 +1,6 @@
-<svg width="1440" height="1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1440" height="1024" fill="#F2FBCB"/>
-    <rect width="1440" height="1024" fill="url(#paint0_linear_567_33)"/>
+<svg width="1440" height="2640" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1440" height="2640" fill="#F2FBCB"/>
+    <rect width="1440" height="2640" fill="url(#paint0_linear_567_33)"/>
     <defs>
         <linearGradient id="paint0_linear_567_33" x1="63.5" y1="127.687" x2="1871.19" y2="679.901" gradientUnits="userSpaceOnUse">
             <stop stop-color="#ADADAD" stop-opacity="0"/>

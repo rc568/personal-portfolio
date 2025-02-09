@@ -1,0 +1,16 @@
+---
+import type { Article } from "../../interfaces";
+import ArticleCard from "./ArticleCard.astro";
+
+interface Props {
+    title: string;
+    articles: Article[];
+}
+
+const { title, articles } = Astro.props;
+---
+
+<section class="flex flex-col gap-4 pb-12">
+    <h2 class="text-xl">{title}</h2>
+    {articles.map((article) => <ArticleCard {...article} />)}
+</section>

@@ -1,0 +1,37 @@
+---
+import type { Project } from "../../interfaces";
+import { lineBreakFormatter } from "../../utils/formatter";
+import Chip from "../Technologies/Chip.astro";
+
+type Props = Project;
+
+const { title, description, technologies, show = true } = Astro.props;
+---
+
+{
+    show && (
+        <article class="rounded-2xl overflow-clip bg-gradient-to-r from-[#E4B55D] to-[#757354] from-0% to-260% flex flex-col">
+            <img class="w-full bg-stone-300 h-[240px] object-cover" src="/turtle.webp" alt="pendiente" />
+            <div class="flex flex-col justify-between px-3 py-4 gap-2 grow">
+                <div>
+                    <h3 class="text-base">{title}</h3>
+                    <p
+                        class="text-stone-600"
+                        set:html={lineBreakFormatter(description)}
+                    />
+                </div>
+                <div>
+                    <h3 class="text-base">Tecnologías usadas</h3>
+                    <div class="flex gap-2">
+                        {technologies.map((tech) => (
+                            <Chip text={tech} size={"small"} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </article>
+    )
+}
+
+<!-- from-[#DDCC7A] via-[#E5C16D] to-[#D1DF8F] from-10% via-75% -->
+ <!-- E4B55D -->
