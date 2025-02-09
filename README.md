@@ -1,2 +1,2 @@
-# personal-portfolio
-Personal Portfolio
+# Portfolio
+Web Portfolio developed in Astro and Tailwind CSS.
