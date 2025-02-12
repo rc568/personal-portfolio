@@ -1,0 +1,35 @@
+---
+import Moon from "../../assets/icons/moon.svg?raw";
+import Sun from "../../assets/icons/sun.svg?raw";
+---
+
+<div id="toggle" class="flex gap-2 cursor-pointer">
+    <button class="w-6 cursor-pointer">
+        <Fragment set:html={Moon} />
+    </button>
+    <button class="w-6 cursor-pointer">
+        <Fragment set:html={Sun} />
+    </button>
+    <span class="sr-only"></span>
+</div>
+
+<script>
+    const updatedThemePreference = () => {
+        document.documentElement.classList.toggle('dark', colorSchemePreference.matches)
+    }
+
+    const handleClick = () => {
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        document.documentElement.classList.toggle('dark')
+
+        localStorage.setItem('theme', theme ? 'light' : 'dark')
+    }
+
+    // Adding a Listener con the colorSchemePreference
+    const colorSchemePreference = window.matchMedia("(prefers-color-scheme: dark)")
+    colorSchemePreference.addEventListener('change', updatedThemePreference)
+    
+    const toggleThemeButton = document.getElementById("toggle")
+    toggleThemeButton?.addEventListener('click', handleClick)
+
+</script>

@@ -1,9 +1,9 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
-import '@fontsource-variable/josefin-sans';
-import background from "../assets/background.svg";
-
+import "@fontsource-variable/josefin-sans";
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -12,9 +12,40 @@ import background from "../assets/background.svg";
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Portafolio Isaac Rojas</title>
+		<ClientRouter />
 	</head>
-	<body class="font-josefin p-12 max-sm:px-4 max-sm:py-6 bg-linear-to-br from-[#f2fbcb] via-[#82b8de] to-[#ADADAD] via-50%">
-		<!-- <img class="fixed inset-0 -z-1 w-full h-full" src={background.src} alt="" /> -->
+	<body class="font-josefin p-12 max-sm:px-4 max-sm:py-6 main-gradient">
+		<div class="fixed top-0 left-0 h-full max-w-full -z-10 container"></div>
 		<slot />
 	</body>
 </html>
+
+<style>
+	.container {
+		background-size: 20px 20px;
+		background-image: linear-gradient(
+				to right,
+				var(--color-gridBackground) 1px,
+				transparent 1px
+			),
+			linear-gradient(
+				to bottom,
+				var(--color-gridBackground) 1px,
+				transparent 1px
+			);
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
+
+<script is:inline>
+	const getThemePreference = () => {
+		const localPreference = localStorage.getItem("theme")
+		if (localPreference) return localPreference
+		return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+	}
+
+	document.documentElement.classList.toggle('dark', getThemePreference() === 'dark')
+</script>

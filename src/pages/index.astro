@@ -1,8 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MainContent from "../components/MainContent.astro";
+import Navbar from "../components/Navbar.astro";
+import AsideOptions from "../components/AsideOptions.astro";
 ---
 
 <Layout>
+    <div class="flex justify-between fixed inset-12 z-20 h-fit">
+        <Navbar />
+        <AsideOptions />
+    </div>
     <MainContent />
 </Layout>

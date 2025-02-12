@@ -1,8 +1,28 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --font-josefin: 'Josefin Sans Variable';
     --color-secondary: #1F36E4;
     --color-onSecondary: #FFFFFF;
     --color-onSurface: #838383;
+    --color-gridBackground: #c8b7b74e;
 }
+
+html.dark {
+    color: white;
+    --color-onSurface: #DA832C;
+    --color-gridBackground: #c8b7b70e;
+}
+
+.main-gradient {
+    @apply bg-linear-to-br from-[#da832c] via-[#82b8de] to-[#ADADAD] via-50%;
+}
+
+.dark .main-gradient {
+    @apply bg-linear-to-br from-[#1e1e1e] via-[#34659d] to-[#ADADAD] via-50%;
+}
+
+/* :root {
+    color-scheme: light;
+} */

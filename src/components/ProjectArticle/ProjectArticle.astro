@@ -4,13 +4,14 @@ import ArticleCard from "./ArticleCard.astro";
 
 interface Props {
     title: string;
+    anchorTag: string;
     articles: Article[];
 }
 
-const { title, articles } = Astro.props;
+const { title, articles, anchorTag } = Astro.props;
 ---
 
-<section class="flex flex-col gap-4 pb-12">
-    <h2 class="text-xl">{title}</h2>
+<section class="flex flex-col gap-4 pb-12" id={anchorTag}>
+    <h2 class="text-3xl font-medium">{title}</h2>
     {articles.map((article) => <ArticleCard {...article} />)}
 </section>
