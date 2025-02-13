@@ -3,11 +3,11 @@ import Moon from "../../assets/icons/moon.svg?raw";
 import Sun from "../../assets/icons/sun.svg?raw";
 ---
 
-<div id="toggle" class="flex gap-2 cursor-pointer">
-    <button class="w-6 cursor-pointer">
+<div id="toggle" class="flex gap-2 cursor-pointer" transition:persist>
+    <button class="p-2 cursor-pointer hover:bg-gray-900/20 transition-colors duration-300 rounded-full dark:opacity-30 dark:hover:bg-transparent dark:cursor-auto">
         <Fragment set:html={Moon} />
     </button>
-    <button class="w-6 cursor-pointer">
+    <button class="p-2 dark:cursor-pointer opacity-30 dark:opacity-100 rounded-full hover:bg-none dark:hover:bg-gray-900/20 transition-colors duration-300">
         <Fragment set:html={Sun} />
     </button>
     <span class="sr-only"></span>
@@ -19,10 +19,17 @@ import Sun from "../../assets/icons/sun.svg?raw";
     }
 
     const handleClick = () => {
-        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        document.documentElement.classList.toggle('dark')
+        const localTheme = localStorage.getItem('theme')
 
-        localStorage.setItem('theme', theme ? 'light' : 'dark')
+        let newTheme
+        if (!localTheme) {
+            newTheme = colorSchemePreference.matches ? 'light' : 'dark'
+        } else {
+            newTheme = localTheme === 'dark' ? 'light' : 'dark'
+        }
+
+        document.documentElement.classList.toggle('dark')
+        localStorage.setItem('theme', newTheme)
     }
 
     // Adding a Listener con the colorSchemePreference

@@ -8,14 +8,14 @@ const { title, dateRange, place, description } = Astro.props;
 ---
 
 <article class="w-full py-3 flex flex-col gap-2">
-    <div class="flex justify-between max-md:flex-col max-md:gap-2">
-        <h2 class="uppercase text-base">
+    <div class="flex justify-between items-center max-md:flex-col max-md:gap-2">
+        <h2 class="uppercase text-lg max-w-4/6">
             {title}
         </h2>
-        <span class="text-sm">
+        <span class="text-base">
             {dateRange}
         </span>
     </div>
-    <h3 class="text-xs text-onSurface">{place}</h3>
-    {( description && <p class="text-sm" set:html={lineBreakFormatter(description)}></p>)}
+    <h3 class="text-sm text-onSurface">{place}</h3>
+    {( description && <p class="text-base" set:html={lineBreakFormatter(description)}></p>)}
 </article>
