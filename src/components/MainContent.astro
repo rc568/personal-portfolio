@@ -4,25 +4,17 @@ import Technologies from "./Technologies/Technologies.astro";
 import ProjectGrid from "../components/ProjectGrid/ProjectGrid.astro";
 import Contact from "./Contact.astro";
 import Footer from "./Footer.astro";
+import Presentation from "./Presentation.astro";
+import About from "./About.astro";
 
 import { education, experiencia } from "../utils/info";
 ---
 
-<div class="mx-auto w-2xl z-50 max-lg:min-w-xs max-lg:w-auto" id="about">
-    <div class="min-h-screen flex flex-col justify-center gap-8">
-        <span class="text-xl text-pretty">Hola, soy</span>
-        <h1 class="lo text-6xl font-lexend tracking-wide pb-1 font-medium bg-gradient-to-br from-cyan-600 to-green-500 bg-clip-text text-transparent">
-            Isaac
-            <br>
-            Rojas
-        </h1>
-        <p class="text-lg">
-            Bachiller en Ingeniería Electrónica
-            <br />
-            Desarrollador Web Full-Stack
-        </p>
-    </div>
-    <Technologies />
+<div class="mx-auto w-2xl max-lg:min-w-xs max-lg:w-auto" id="#">
+    <Presentation />
+    <About>
+        <Technologies />
+    </About>
     <ProjectArticle
         title={"Educación"}
         articles={education}
