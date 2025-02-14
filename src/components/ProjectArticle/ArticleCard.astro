@@ -16,6 +16,6 @@ const { title, dateRange, place, description } = Astro.props;
             {dateRange}
         </span>
     </div>
-    <h3 class="text-sm text-onSurface">{place}</h3>
-    {( description && <p class="text-base" set:html={lineBreakFormatter(description)}></p>)}
+    <h3 class="text-base text-stone-400">{place}</h3>
+    {( description && <p class="text-lg text-onSurfaceVariant" set:html={lineBreakFormatter(description)}></p>)}
 </article>

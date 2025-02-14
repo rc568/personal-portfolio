@@ -8,6 +8,7 @@
   --color-secondary: #1f36e4;
   --color-onSecondary: #ffffff;
   --color-onSurface: #838383;
+  --color-onSurfaceVariant: #333333;
   --color-gridBackground: #c8b7b70e;
 }
 
@@ -15,6 +16,7 @@ html.dark {
   color: white;
   --color-onSurface: #da832c;
   --color-gridBackground: #c8b7b70e;
+  --color-onSurfaceVariant: #cbddf0;
 }
 
 .main-gradient {

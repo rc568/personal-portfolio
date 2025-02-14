@@ -20,14 +20,14 @@ const technologies = [
 ];
 ---
 
-<section class="flex flex-col gap-4 py-6 h-screen">
+<section class="flex flex-col gap-4 py-6">
     <h2 class="text-2xl font-medium">Tecnologías</h2>
     {
         technologies.map((technology) => {
             return technology.show && (
-                <article class="text-teal-50">
-                    <h3 class="text-lg">{technology.title}</h3>
-                    <div class="flex gap-2">
+                <article class="">
+                    <h3 class="text-lg pb-2">{technology.title}</h3>
+                    <div class="flex gap-3">
                         {technology.technologies.map(tech => <Chip text={tech} />)}
                     </div>
                 </article>

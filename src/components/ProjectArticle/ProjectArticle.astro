@@ -11,7 +11,7 @@ interface Props {
 const { title, articles, anchorTag } = Astro.props;
 ---
 
-<section class="flex flex-col gap-4 py-6 max-lg:min-h-screen" id={anchorTag}>
-    <h2 class="text-3xl font-medium">{title}</h2>
+<section class="flex flex-col justify-center gap-4 max-lg:min-h-screen max-lg:py-20" id={anchorTag}>
+    <h2 class="text-3xl tracking-wide">{title}</h2>
     {articles.map((article) => <ArticleCard {...article} />)}
 </section>
