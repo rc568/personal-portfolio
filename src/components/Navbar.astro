@@ -1,13 +1,76 @@
 ---
-
+import Briefcase from "../assets/icons/briefcase.svg?raw";
+import Code from "../assets/icons/code.svg?raw";
+import Graduation from "../assets/icons/graduation-cap.svg?raw";
+import User from "../assets/icons/user.svg?raw";
+import Email from "../assets/icons/email.svg?raw";
+import Sun from "../assets/icons/sun.svg?raw";
+import Moon from "../assets/icons/moon.svg?raw";
+import Dropdown from "./Common/Dropdown.astro";
 ---
 
-<nav>
-    <ul class="flex flex-col gap-3">
-        <li class="border-l-3 pl-1"><a href="#">Sobre mí</a></li>
-        <li class="border-l-3 pl-1"><a href="#education">Educación</a></li>
-        <li class="border-l-3 pl-1"><a href="#experience">Experiencia</a></li>
-        <li class="border-l-3 pl-1"><a href="#projects">Proyectos</a></li>
-        <li class="border-l-3 pl-1"><a href="#contact">Contacto</a></li>
+<nav class="fixed left-12 max-lg:w-full max-lg:fixed max-lg:left-1/2 max-lg:top-0 max-lg:-translate-x-1/2 max-lg:backdrop-blur-lg max-lg:py-4 max-lg:px-4">
+    <ul class="flex flex-col gap-3 max-lg:flex-row max-lg:justify-evenly">
+        <li class="">
+            <a href="#about">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={User} />
+                </div>
+                <span class="max-lg:hidden">Sobre mí</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#education">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Graduation} />
+                </div>
+                <span class="max-lg:hidden">Educación</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#experience">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Briefcase} />
+                </div>
+                <span class="max-lg:hidden">Experiencia</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#projects">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Code} />
+                </div>
+                <span class="max-lg:hidden">Proyectos</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#contact">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Email} />
+                </div>
+                <span class="max-lg:hidden">Contacto</span>
+            </a>
+        </li>
+        <li class="hidden dark:block md:dark:hidden">
+            <button id="toggle">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Sun} />
+                </div>
+            </button>
+        </li>
+        <li class="dark:hidden">
+            <button id="toggle">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Moon} />
+                </div>
+            </button>
+        </li>
+        <li class="hidden max-lg:block">
+            <Dropdown />
+        </li>
     </ul>
 </nav>
+
+<script>
+
+</script>

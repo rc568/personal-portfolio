@@ -220,6 +220,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/josefin-sans/-/josefin-sans-5.1.1.tgz#269f2fb55cb4e0243cbb7e99008827c6da2e5205"
   integrity sha512-yNnqEfwy0iV61kylO4gHv10tIYTE+/qq2jssI5ppsm/xaUgEWdeUCQibVqBZJTrOSucUBTnCx4VFtLiwE4IIgQ==
 
+"@fontsource-variable/lexend@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/lexend/-/lexend-5.1.2.tgz#13fc18f6c4e0f46f9d779ad19abeb16c766d9630"
+  integrity sha512-5gY4aYZXvhCNrpqa7f/JmRnUyRMAPqGdE0IXicbqvusj+jEwuj1JuiLPl61hTbGntQP+sMZsDHECBhlrEY/8iQ==
+
 "@img/sharp-darwin-arm64@0.33.5":
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.33.5.tgz#ef5b5a07862805f1e8145a377c8ba6e98813ca08"
@@ -2167,6 +2172,11 @@ preferred-pm@^4.1.1:
     find-up-simple "^1.0.0"
     find-yarn-workspace-root2 "1.2.16"
     which-pm "^3.0.1"
+
+prettier-plugin-tailwindcss@^0.6.11:
+  version "0.6.11"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.6.11.tgz#cfacd60c4f81997353ee913e589037f796df0f5f"
+  integrity sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==
 
 prismjs@^1.29.0:
   version "1.29.0"

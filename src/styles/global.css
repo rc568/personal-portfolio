@@ -1,9 +1,10 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant light (&:where(.light, .light *));
 
 @theme {
-  --font-josefin: 'Josefin Sans Variable';
+  --font-josefin: "Josefin Sans Variable";
+  --font-lexend: "Lexend Variable";
   --color-secondary: #1f36e4;
   --color-onSecondary: #ffffff;
   --color-onSurface: #838383;

@@ -3,11 +3,11 @@ import Moon from "../../assets/icons/moon.svg?raw";
 import Sun from "../../assets/icons/sun.svg?raw";
 ---
 
-<div id="toggle" class="flex gap-2 cursor-pointer" transition:persist>
-    <button class="p-2 cursor-pointer hover:bg-gray-900/20 transition-colors duration-300 rounded-full dark:opacity-30 dark:hover:bg-transparent dark:cursor-auto">
+<div id="toggle" class="flex gap-2 cursor-pointer max-lg:gap-5" transition:persist>
+    <button class="w-9 p-2 cursor-pointer transition-colors duration-300 rounded-full hover:bg-gray-900/20 dark:opacity-30 dark:hover:bg-transparent dark:cursor-auto max-lg:p-0 max-lg:w-6">
         <Fragment set:html={Moon} />
     </button>
-    <button class="p-2 dark:cursor-pointer opacity-30 dark:opacity-100 rounded-full hover:bg-none dark:hover:bg-gray-900/20 transition-colors duration-300">
+    <button class="w-9 p-2 opacity-30 hover:bg-none rounded-full transition-colors duration-300 dark:opacity-100 dark:hover:bg-gray-900/20 dark:cursor-pointer max-lg:p-0 max-lg:w-6">
         <Fragment set:html={Sun} />
     </button>
     <span class="sr-only"></span>
@@ -36,7 +36,9 @@ import Sun from "../../assets/icons/sun.svg?raw";
     const colorSchemePreference = window.matchMedia("(prefers-color-scheme: dark)")
     colorSchemePreference.addEventListener('change', updatedThemePreference)
     
-    const toggleThemeButton = document.getElementById("toggle")
-    toggleThemeButton?.addEventListener('click', handleClick)
+    const toggleThemeButtons = document.querySelectorAll('#toggle')
+    toggleThemeButtons.forEach(toggleButton => {
+        toggleButton.addEventListener('click', handleClick)
+    });
 
 </script>

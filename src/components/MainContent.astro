@@ -8,14 +8,18 @@ import Footer from "./Footer.astro";
 import { education, experiencia } from "../utils/info";
 ---
 
-<div class="mx-auto w-2xl max-md:min-w-xs max-md:w-auto">
-    <div class="">
-
-        <h1 class="text-3xl font-josefin font-medium" id="about">Isaac Rojas</h1>
-        <p class="text-base pt-4">
-            Soy bachiller en Ingeniería Electrónica.
+<div class="mx-auto w-2xl z-50 max-lg:min-w-xs max-lg:w-auto" id="about">
+    <div class="min-h-screen flex flex-col justify-center gap-8">
+        <span class="text-xl text-pretty">Hola, soy</span>
+        <h1 class="lo text-6xl font-lexend tracking-wide pb-1 font-medium bg-gradient-to-br from-cyan-600 to-green-500 bg-clip-text text-transparent">
+            Isaac
+            <br>
+            Rojas
+        </h1>
+        <p class="text-lg">
+            Bachiller en Ingeniería Electrónica
             <br />
-            Actualmente me dedicó al desarrollo web Full-Stack.
+            Desarrollador Web Full-Stack
         </p>
     </div>
     <Technologies />
