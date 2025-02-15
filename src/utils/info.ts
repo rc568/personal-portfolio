@@ -45,11 +45,12 @@ export const projects: Project[] = [
     description:
       "Proyecto Fullstack de un e-commerce para generar un mejor alcance al público objetivo así como un panel de administración de la tienda.",
     technologies: ["NextJS", "Nodejs", "Docker"],
+    show: false,
   },
   {
     title: "Smart Campus UNI",
     description:
-      "Proyecto colaborativo desarrollado en React del cuál soy partícipe.\\nRealicé las siguientes actividades:\\nMigración del código a Typescript\\nOptimización del código\\nMantenimiento",
+      "Proyecto colaborativo desarrollado en React del cuál soy partícipe.\\nRealicé las siguientes actividades:\\n - Migración del código a Typescript\\n - Optimización del código\\n - Mantenimiento del aplicativo",
     technologies: ["Typescript", "React", "Github"],
   },
   {
@@ -57,5 +58,24 @@ export const projects: Project[] = [
     description:
       "Landing Page del emprendimiento Local (servicio de diseño interior).",
     technologies: ["Astro", "Figma"],
+    show: false,
+  },
+] as const;
+
+export const technologies = [
+  {
+      title: "Frontend",
+      technologies: ["React", "Tailwind", "Astro"],
+      show: true,
+  },
+  {
+      title: "Backend",
+      technologies: ["Nodejs", ],
+      show: true,
+  },
+  {
+      title: "Herramientas",
+      technologies: ["Git", "Docker",],
+      show: true,
   },
 ] as const;

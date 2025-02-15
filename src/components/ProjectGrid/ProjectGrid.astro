@@ -2,9 +2,9 @@
 import { projects } from "../../utils/info";
 import ProjectCard from "./ProjectCard.astro";
 ---
-<section class="py-6" id="projects">
-    <h2 class="pb-4 text-3xl font-medium">Proyectos</h2>
-    <div class="grid grid-cols-2 gap-4 justify-between max-lg:grid-cols-1">
+<section class="flex flex-col gap-4 justify-center min-h-screen py-20" id="projects">
+    <h2 class="text-3xl font-medium">Proyectos</h2>
+    <div class="grid grid-cols-1 gap-4 justify-between max-lg:grid-cols-1">
         {projects.map((project) => <ProjectCard {...project} />)}
     </div>
 </section>

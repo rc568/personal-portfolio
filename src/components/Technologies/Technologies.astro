@@ -1,23 +1,6 @@
 ---
 import Chip from "./Chip.astro";
-
-const technologies = [
-    {
-        title: "Frontend",
-        technologies: ["React", "Next JS", "Astro"],
-        show: true,
-    },
-    {
-        title: "Backend",
-        technologies: ["Nodejs", ".NET"],
-        show: true,
-    },
-    {
-        title: "Herramientas",
-        technologies: ["Git", "Docker"],
-        show: true,
-    },
-];
+import { technologies } from "../../utils/info";
 ---
 
 <section class="flex flex-col gap-4 py-6">
