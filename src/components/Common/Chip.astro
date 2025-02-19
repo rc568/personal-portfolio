@@ -8,9 +8,9 @@ const { text, size = 'normal' } = Astro.props;
 ---
 
 <span class:list={[
-    "bg-secondary text-onSecondary py-1.5 px-3 rounded-lg font-normal",
+    "bg-secondary text-onSecondary py-1.5 px-3 rounded-lg font-normal text-lg",
     {
-        'text-sm px-2': size === 'small'
+        'text-normal px-2': size === 'small'
     }
 ]}>
     {text}

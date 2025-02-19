@@ -1,16 +1,22 @@
 ---
-import Briefcase from "../assets/icons/briefcase.svg?raw";
-import Code from "../assets/icons/code.svg?raw";
-import Graduation from "../assets/icons/graduation-cap.svg?raw";
-import User from "../assets/icons/user.svg?raw";
-import Email from "../assets/icons/email.svg?raw";
-import Sun from "../assets/icons/sun.svg?raw";
-import Moon from "../assets/icons/moon.svg?raw";
-import Dropdown from "./Common/Dropdown.astro";
+import Briefcase from "@icons/briefcase.svg?raw";
+import Code from "@icons/code.svg?raw";
+import Graduation from "@icons/graduation-cap.svg?raw";
+import User from "@icons/user.svg?raw";
+import Sharp from "@icons/sharp.svg?raw";
+import Email from "@icons/email.svg?raw";
 ---
 
-<nav class="fixed left-0 top-0 p-16 w-full max-lg:w-full max-lg:fixed max-lg:left-1/2 max-lg:top-0 max-lg:-translate-x-1/2 backdrop-blur-lg max-lg:p-4">
-    <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-3">
+<nav class="">
+    <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-8">
+        <li class="">
+            <a href="#home">
+                <div class="w-6 hidden max-lg:block">
+                    <Fragment set:html={Sharp} />
+                </div>
+                <span class="max-lg:hidden">Inicio</span>
+            </a>
+        </li>
         <li class="">
             <a href="#about">
                 <div class="w-6 hidden max-lg:block">
@@ -51,23 +57,6 @@ import Dropdown from "./Common/Dropdown.astro";
                 <span class="max-lg:hidden">Contacto</span>
             </a>
         </li>
-        <li class="hidden dark:block lg:dark:hidden">
-            <button id="toggle">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Sun} />
-                </div>
-            </button>
-        </li>
-        <li class="dark:hidden">
-            <button id="toggle">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Moon} />
-                </div>
-            </button>
-        </li>
-        <!-- <li class="hidden max-lg:block">
-            <Dropdown />
-        </li> -->
     </ul>
 </nav>
 
