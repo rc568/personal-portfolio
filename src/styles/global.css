@@ -25,6 +25,7 @@ html.dark {
 }
 
 :root {
+  color: black;
   color-scheme: light dark;
   --color-gridBackground: #c8b7b72c;
 }
