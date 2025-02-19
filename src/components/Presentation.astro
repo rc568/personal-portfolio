@@ -1,13 +1,20 @@
-<div class="min-h-screen flex flex-col justify-center gap-8">
-    <span class="text-lg">Hola, soy</span>
-    <h1 class="text-6xl font-lexend tracking-wide pb-1 font-medium bg-gradient-to-br from-cyan-600 to-green-500 bg-clip-text text-transparent">
+---
+import Email from "../assets/icons/email.svg?raw";
+---
+
+<div class="min-h-screen flex flex-col justify-center items-end gap-4 translate-x-80">
+    <h1 class="text-6xl font-lexend tracking-wide font-medium bg-gradient-to-br from-cyan-600 to-green-500 bg-clip-text text-transparent pb-6">
         Isaac
-        <br>
+
         Rojas
     </h1>
-    <p class="text-xl">
-        Bachiller en Ingeniería Electrónica
-        <br />
-        Desarrollador Web Full-Stack
+    <p class="text-2xl text-end text-slate-100">
+        &lt; Desarrollador Web Full-Stack &gt;
     </p>
+    <div class="flex gap-4 items-center text-slate-200">
+        <div class="w-8">
+            <Fragment set:html={Email} />
+        </div>
+        <span class="text-lg text-slate-200">isaac568r@gmail.com</span>
+    </div>
 </div>
