@@ -100,7 +100,7 @@ export const navbar: NavBar[] = [
   {
     title: 'Educación',
     icon: Graduation,
-    href: 'graduation',
+    href: 'education',
   },
   {
     title: 'Proyectos',
