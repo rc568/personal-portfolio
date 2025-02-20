@@ -10,6 +10,20 @@
   --color-onSurface: #838383;
   --color-onSurfaceVariant: #333333;
   --color-gridBackground: #c8b7b70e;
+  --animate-appear: appear linear;
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+      transform: translateX(0px);
+    }
+  }
 }
 
 html.dark {
@@ -22,6 +36,11 @@ html.dark {
 .main-gradient {
   @apply bg-linear-to-br from-[#ffffff] via-[#82b8de] to-[#ADADAD] via-50%
   dark:bg-linear-to-br dark:from-[#1e1e1e] dark:via-[#34659d] dark:to-[#ADADAD] dark:via-50%;
+}
+
+.animate-appear {
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 :root {
