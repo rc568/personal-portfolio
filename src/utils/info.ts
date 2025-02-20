@@ -1,4 +1,10 @@
-import type { Article, Project } from "../interfaces";
+import Code from "@icons/code.svg?raw";
+import Graduation from "@icons/graduation-cap.svg?raw";
+import User from "@icons/user.svg?raw";
+import Sharp from "@icons/sharp.svg?raw";
+import Email from "@icons/email.svg?raw";
+
+import type { Article, NavBar, Project, Technologies } from "../interfaces";
 
 export const education: Article[] = [
   {
@@ -62,7 +68,7 @@ export const projects: Project[] = [
   },
 ] as const;
 
-export const technologies = [
+export const technologies: Technologies[] = [
   {
       title: "Frontend",
       technologies: ["React", "Tailwind", "Astro"],
@@ -79,3 +85,31 @@ export const technologies = [
       show: true,
   },
 ] as const;
+
+export const navbar: NavBar[] = [
+  {
+    title: 'Inicio',
+    icon: Sharp,
+    href: 'home',
+  },
+  {
+    title: 'Sobre mí',
+    icon: User,
+    href: 'about',
+  },
+  {
+    title: 'Educación',
+    icon: Graduation,
+    href: 'graduation',
+  },
+  {
+    title: 'Proyectos',
+    icon: Code,
+    href: 'projects',
+  },
+  {
+    title: 'Contacto',
+    icon: Email,
+    href: 'contact',
+  },
+]

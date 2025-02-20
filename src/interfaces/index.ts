@@ -11,3 +11,15 @@ export interface Project {
   technologies: string[];
   show?: boolean;
 }
+
+export interface Technologies {
+  title: string,
+  technologies: string[],
+  show?: boolean,
+}
+
+export interface NavBar {
+  title: string
+  icon: string
+  href: string
+}

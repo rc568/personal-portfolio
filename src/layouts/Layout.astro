@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 import "@fontsource-variable/josefin-sans";
 import '@fontsource-variable/lexend';
+import '@fontsource-variable/mona-sans';
 import Header from "../components/Header/Header.astro";
 ---
 
@@ -16,7 +17,7 @@ import Header from "../components/Header/Header.astro";
 		<title>Portafolio Isaac Rojas</title>
 		<ClientRouter />
 	</head>
-	<body class="font-josefin p-12 main-gradient max-sm:px-6 max-sm:py-6">
+	<body class="font-mona p-12 main-gradient max-sm:px-6 max-sm:py-6">
 		<Header />
 		<div class="fixed top-0 left-0 h-full max-w-full -z-10 container"></div>
 		<slot />

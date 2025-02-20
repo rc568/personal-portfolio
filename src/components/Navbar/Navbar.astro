@@ -1,65 +1,22 @@
 ---
-import Briefcase from "@icons/briefcase.svg?raw";
-import Code from "@icons/code.svg?raw";
-import Graduation from "@icons/graduation-cap.svg?raw";
-import User from "@icons/user.svg?raw";
-import Sharp from "@icons/sharp.svg?raw";
-import Email from "@icons/email.svg?raw";
+import { navbar } from "../../utils/info";
 ---
 
 <nav class="">
-    <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-8">
-        <li class="">
-            <a href="#home">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Sharp} />
-                </div>
-                <span class="max-lg:hidden">Inicio</span>
+  <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-8">
+    {
+      navbar.map((nav) => {
+        return (
+          <li>
+            <a href={`#${nav.href}`}>
+              <div class="w-6 hidden max-lg:block">
+                <Fragment set:html={nav.icon} />
+              </div>
+              <span class="max-lg:hidden">{nav.title}</span>
             </a>
-        </li>
-        <li class="">
-            <a href="#about">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={User} />
-                </div>
-                <span class="max-lg:hidden">Sobre mí</span>
-            </a>
-        </li>
-        <li class="">
-            <a href="#education">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Graduation} />
-                </div>
-                <span class="max-lg:hidden">Educación</span>
-            </a>
-        </li>
-        <!-- <li class="">
-            <a href="#experience">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Briefcase} />
-                </div>
-                <span class="max-lg:hidden">Experiencia</span>
-            </a>
-        </li> -->
-        <li class="">
-            <a href="#projects">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Code} />
-                </div>
-                <span class="max-lg:hidden">Proyectos</span>
-            </a>
-        </li>
-        <li class="">
-            <a href="#contact">
-                <div class="w-6 hidden max-lg:block">
-                    <Fragment set:html={Email} />
-                </div>
-                <span class="max-lg:hidden">Contacto</span>
-            </a>
-        </li>
-    </ul>
+          </li>
+        );
+      })
+    }
+  </ul>
 </nav>
-
-<script>
-
-</script>
