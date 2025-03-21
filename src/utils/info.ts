@@ -56,7 +56,8 @@ export const projects: Project[] = [
   {
     title: "Smart Campus UNI",
     description:
-      "Proyecto colaborativo desarrollado en React del cuál soy partícipe.\\nRealicé las siguientes actividades:\\n - Migración del código a Typescript\\n - Optimización del código\\n - Mantenimiento del aplicativo",
+      "Proyecto colaborativo desarrollado en React del cuál soy partícipe.\\n\\nRealicé las siguientes actividades:\\n - Migración del código a Typescript\\n - Optimización del código\\n - Mantenimiento del aplicativo",
+    href: 'https://smartcampusuni.netlify.app/',
     technologies: ["Typescript", "React", "Github"],
   },
   {
@@ -70,19 +71,19 @@ export const projects: Project[] = [
 
 export const technologies: Technologies[] = [
   {
-      title: "Frontend",
-      technologies: ["React", "Tailwind", "Astro"],
-      show: true,
+    title: "Frontend",
+    technologies: ["React", "Tailwind", "Astro"],
+    show: true,
   },
   {
-      title: "Backend",
-      technologies: ["Nodejs", ],
-      show: true,
+    title: "Backend",
+    technologies: ["Nodejs",],
+    show: true,
   },
   {
-      title: "Herramientas",
-      technologies: ["Git", "Docker",],
-      show: true,
+    title: "Herramientas",
+    technologies: ["Git", "Docker",],
+    show: true,
   },
 ] as const;
 
