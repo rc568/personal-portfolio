@@ -82,7 +82,7 @@ export const technologies: Technologies[] = [
   },
   {
     title: "Herramientas",
-    technologies: ["Git", "Docker",],
+    technologies: ["Git", "Github", "Docker"],
     show: true,
   },
 ] as const;
