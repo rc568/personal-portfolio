@@ -7,13 +7,13 @@ import Email from "@icons/email.svg?raw";
 import type { Article, NavBar, Project, Technologies } from "../interfaces";
 
 export const education: Article[] = [
-  {
-    title: "Net 9 & Angular 19 Developer",
-    dateRange: "Ene 2025 - Mar 2025",
-    place: "Galaxy Training",
-    description:
-      "Curso Fullstack de 48 horas.\\nEn el backend se desarolló Minimal APIs con .NET9 y en el frontend la interfaz de usuario utilizando Angular.",
-  },
+  // {
+  //   title: "Net 9 & Angular 19 Developer",
+  //   dateRange: "Ene 2025 - Mar 2025",
+  //   place: "Galaxy Training",
+  //   description:
+  //     "Curso Fullstack de 48 horas.\\nEn el backend se desarolló Minimal APIs con .NET9 y en el frontend la interfaz de usuario utilizando Angular.",
+  // },
   {
     title: "UX & UI Designer: Diseño de experiencia de usuario",
     dateRange: "Jun 2024 - Sep 2024",
