@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description:
       "Proyecto e-commerce para un negocio de venta e importación en Perú. El cliente buscaba posicionamiento en la web y se logró dar visibilidad a sus catálogos, aumentando la cantidad de clientes potenciales que podían encontrar los productos.\\n\\nComo tecnologías se usó:\\n- Astro y Tailwind para el frontend (SSG/SSR).\\n- Uso de acciones en Astro para solicitar información de la base de datos en Turso.\\n- Uso de React y nanostores para manejar el estado global de los favoritos.\\n- Uso adecuado del SEO para el posicionamiento.",
     href: 'https://mandrilimportaciones.com.pe/',
-    urlImage: "/images/pj1.jpeg",
+    urlImage: "/images/pj1.jpg",
     technologies: ["Astro", "Typescript", "Tailwind"],
     show: true,
   },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     description:
       "Web hecha a medida con formulario de asistencia. Se priorizó la coherencia visual y la funcionalidad en el proyecto.\\n\\nComo tecnologías se usó:\\n- React, Tailwind y shadcn (adecuando al sistema de diseño) para el frontend.\\n- Uso de animaciones 3D en CSS asegurando la compatibilidad de diversos navegadores.\\n- Conexión a Supabase para guardar los respuestas del formulario.",
     href: "https://babyshowerdaniel.com",
-    urlImage: "/images/pj2.jpeg",
+    urlImage: "/images/pj2.jpg",
     technologies: ["React", "Typescript", "Tailwind", "Supabase"],
     show: true,
   },
