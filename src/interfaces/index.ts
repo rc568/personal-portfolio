@@ -9,6 +9,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
+  urlImage: string;
   href?: string
   show?: boolean;
 }

@@ -1,8 +1,8 @@
 import Code from "@icons/code.svg?raw";
-import Graduation from "@icons/graduation-cap.svg?raw";
-import User from "@icons/user.svg?raw";
-import Sharp from "@icons/sharp.svg?raw";
 import Email from "@icons/email.svg?raw";
+import Graduation from "@icons/graduation-cap.svg?raw";
+import Sharp from "@icons/sharp.svg?raw";
+import User from "@icons/user.svg?raw";
 
 import type { Article, NavBar, Project, Technologies } from "../interfaces";
 
@@ -47,24 +47,37 @@ export const experiencia: Article[] = [
 
 export const projects: Project[] = [
   {
-    title: "Mandril Importaciones",
+    title: "Web Mandril Importaciones",
     description:
-      "Proyecto Fullstack de un e-commerce para generar un mejor alcance al público objetivo así como un panel de administración de la tienda.",
-    technologies: ["NextJS", "Nodejs", "Docker"],
-    show: false,
+      "Proyecto e-commerce para un negocio de venta e importación en Perú. El cliente buscaba posicionamiento en la web y se logró dar visibilidad a sus catálogos, aumentando la cantidad de clientes potenciales que podían encontrar los productos.\\n\\nComo tecnologías se usó:\\n- Astro y Tailwind para el frontend (SSG/SSR).\\n- Uso de acciones en Astro para solicitar información de la base de datos en Turso.\\n- Uso de React y nanostores para manejar el estado global de los favoritos.\\n- Uso adecuado del SEO para el posicionamiento.",
+    href: 'https://mandrilimportaciones.com.pe/',
+    urlImage: "/images/pj1.jpeg",
+    technologies: ["Astro", "Typescript", "Tailwind"],
+    show: true,
+  },
+  {
+    title: "Invitación a Baby Shower",
+    description:
+      "Web hecha a medida con formulario de asistencia. Se priorizó la coherencia visual y la funcionalidad en el proyecto.\\n\\nComo tecnologías se usó:\\n- React, Tailwind y shadcn (adecuando al sistema de diseño) para el frontend.\\n- Uso de animaciones 3D en CSS asegurando la compatibilidad de diversos navegadores.\\n- Conexión a Supabase para guardar los respuestas del formulario.",
+    href: "https://babyshowerdaniel.com",
+    urlImage: "/images/pj2.jpeg",
+    technologies: ["React", "Typescript", "Tailwind", "Supabase"],
+    show: true,
   },
   {
     title: "Smart Campus UNI",
     description:
-      "Proyecto colaborativo desarrollado en React del cuál soy partícipe.\\n\\nRealicé las siguientes actividades:\\n - Migración del código a Typescript\\n - Optimización del código\\n - Mantenimiento del aplicativo",
+      "Proyecto colaborativo desarrollado en React del cuál participé.\\n\\nColaboré con las siguientes actividades:\\n- Migración del código de Javascript a Typescript.\\n- Optimización del código.\\n- Mantenimiento de la aplicación.",
     href: 'https://smartcampusuni.netlify.app/',
-    technologies: ["Typescript", "React", "Github"],
+    urlImage: "/images/pj3.jpg",
+    technologies: ["Typescript", "React", "Git"],
   },
   {
     title: "Local",
     description:
       "Landing Page del emprendimiento Local (servicio de diseño interior).",
     technologies: ["Astro", "Figma"],
+    urlImage: "",
     show: false,
   },
 ] as const;
@@ -72,17 +85,17 @@ export const projects: Project[] = [
 export const technologies: Technologies[] = [
   {
     title: "Frontend",
-    technologies: ["React", "Tailwind", "Astro"],
+    technologies: ["React", "Astro", "Tailwind"],
     show: true,
   },
   {
     title: "Backend",
-    technologies: ["Nodejs",],
+    technologies: ["Nodejs", "Typescript"],
     show: true,
   },
   {
     title: "Herramientas",
-    technologies: ["Git", "Github", "Docker"],
+    technologies: ["Git", "Github", "Docker", "Figma", "Herramientas de IA"],
     show: true,
   },
 ] as const;
