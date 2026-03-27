@@ -26,6 +26,21 @@
   }
 }
 
+@layer base {
+  h1 {
+    @apply text-6xl lg:text-8xl tracking-wide font-medium;
+  }
+  h2 {
+    @apply text-xl lg:text-3xl tracking-wide font-medium;
+  }
+  h3 {
+    @apply text-base lg:text-lg tracking-wide font-normal;
+  }
+  p {
+    @apply text-sm lg:text-base leading-6 font-normal; 
+  }
+}
+
 html.dark {
   color: white;
   --color-onSurface: #da832c;

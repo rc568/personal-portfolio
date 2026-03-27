@@ -1,5 +1,5 @@
 ---
-import type { Article } from '../../interfaces/index'
+import type { Article } from '../../interfaces/index';
 import { lineBreakFormatter } from '../../utils/formatter';
 
 type Props = Article
@@ -7,15 +7,25 @@ type Props = Article
 const { title, dateRange, place, description } = Astro.props;
 ---
 
-<article class="w-full py-3 flex flex-col gap-2">
-    <div class="flex justify-between items-center max-lg:flex-col max-lg:gap-2 max-lg:items-start">
-        <h2 class="uppercase text-lg max-w-4/6 max-lg:max-w-full">
-            {title}
-        </h2>
-        <span class="text-base">
-            {dateRange}
-        </span>
-    </div>
-    <h3 class="text-base text-gray-500 dark:text-teal-100">{place}</h3>
-    {( description && <p class="text-lg text-onSurfaceVariant" set:html={lineBreakFormatter(description)}></p>)}
+<article class="flex w-full flex-col gap-1 py-4">
+  <div class="flex items-start justify-between gap-2 max-lg:flex-col">
+    <h3 class="max-w-prose uppercase tracking-tight text-slate-900 dark:text-white max-lg:max-w-full">
+      {title}
+    </h3>
+    
+    <span class="shrink-0 text-sm font-medium text-slate-500 dark:text-slate-300">
+      {dateRange}
+    </span>
+  </div>
+
+  <p class="font-medium text-teal-600 dark:text-teal-300">
+    {place}
+  </p>
+
+  {description && (
+    <p 
+      class="mt-2 text-slate-600 dark:text-slate-300" 
+      set:html={lineBreakFormatter(description)}
+    />
+  )}
 </article>
