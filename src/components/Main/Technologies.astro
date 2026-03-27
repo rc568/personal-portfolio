@@ -1,6 +1,6 @@
 ---
-import Chip from "../Common/Chip.astro";
 import { technologies } from "../../utils/info";
+import Chip from "../Common/Chip.astro";
 ---
 
 <section class="flex flex-col gap-4 py-6">
@@ -8,12 +8,12 @@ import { technologies } from "../../utils/info";
     {
         technologies.map((technology) => {
             return technology.show && (
-                <article class="">
+                <section>
                     <h3 class="text-lg pb-2">{technology.title}</h3>
-                    <div class="flex gap-3">
+                    <div class="flex gap-3 flex-wrap">
                         {technology.technologies.map(tech => <Chip text={tech} />)}
                     </div>
-                </article>
+                </section>
             );
         })
     }
