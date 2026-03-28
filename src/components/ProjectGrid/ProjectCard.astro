@@ -12,7 +12,7 @@ const { title, description, technologies, show = true, href, urlImage } = Astro.
 
 {
   show && (
-    <article class="rounded-2xl overflow-clip bg-gradient-to-r from-cyan-600 to-green-300 via-85% flex flex-col">
+    <article class="rounded-2xl overflow-clip bg-gradient-to-r from-cyan-600 to-green-300 via-85% flex flex-col animate-appear">
       <Image
         class="w-full aspect-video bg-stone-300 object-cover object-left-top"
         src={urlImage}
@@ -49,3 +49,4 @@ const { title, description, technologies, show = true, href, urlImage } = Astro.
 <!-- from-[#DDCC7A] via-[#E5C16D] to-[#D1DF8F] from-10% via-75% -->
 <!-- E4B55D -->
 <!-- bg-gradient-to-r from-[#E4B55D] to-[#757354] from-0% to-260% -->
+
