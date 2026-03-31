@@ -15,7 +15,7 @@ import Header from "../components/Header/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Portafolio Isaac Rojas</title>
 	</head>
-	<body class="font-mona main-gradient">
+	<body class="font-mona text-foreground main-gradient">
 		<Header />
 		<div class="fixed top-0 left-0 h-full max-w-full -z-10 container"></div>
 		<slot />
@@ -27,12 +27,12 @@ import Header from "../components/Header/Header.astro";
 		background-size: 20px 20px;
 		background-image: linear-gradient(
 				to right,
-				var(--color-gridBackground) 1px,
+				var(--grid-color) 1px,
 				transparent 1px
 			),
 			linear-gradient(
 				to bottom,
-				var(--color-gridBackground) 1px,
+				var(--grid-color) 1px,
 				transparent 1px
 			);
 	}
