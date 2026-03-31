@@ -1,15 +1,56 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  color-scheme: light dark;
+
+  --site-bg-from: 0 0% 100%;
+  --site-bg-via: 205 58% 69%;
+  --site-bg-to: 0 0% 68%;
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 20%;
+  --accent: 233 78% 51%;
+  --accent-foreground: 0 0% 100%;
+
+  --grid-hsl: 0 13% 75%;
+  --grid-opacity: 0.173;
+  --grid-color: hsl(var(--grid-hsl) / var(--grid-opacity));
+}
+
+html.dark {
+  --site-bg-from: 0 0% 12%;
+  --site-bg-via: 212 50% 41%;
+  --site-bg-to: 0 0% 10%;
+  --site-bg-to: 0 0% 68%;
+
+  --background: 0 0% 100%;
+  --foreground: 211 55% 87%;
+  --accent: 233 78% 51%;
+  --accent-foreground: 0 0% 100%;
+
+  --grid-opacity: 0.055;
+}
+
+.main-gradient {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--site-bg-from)),
+    hsl(var(--site-bg-via)) 50%,
+    hsl(var(--site-bg-to))
+  );
+}
+
 @theme {
   --font-josefin: "Josefin Sans Variable";
   --font-lexend: "Lexend Variable";
   --font-mona: "Mona Sans Variable";
-  --color-secondary: #1f36e4;
-  --color-onSecondary: #ffffff;
-  --color-onSurface: #838383;
-  --color-onSurfaceVariant: #333333;
-  --color-gridBackground: #c8b7b70e;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
   --animate-appear: appear ease-out;
 
   @keyframes appear {
@@ -54,22 +95,4 @@
       animation-range: entry 5% cover 35%;
     }
   }
-}
-
-html.dark {
-  color: white;
-  --color-onSurface: #da832c;
-  --color-gridBackground: #c8b7b70e;
-  --color-onSurfaceVariant: #cbddf0;
-}
-
-.main-gradient {
-  @apply bg-linear-to-br from-[#ffffff] via-[#82b8de] to-[#ADADAD] via-50%
-  dark:bg-linear-to-br dark:from-[#1e1e1e] dark:via-[#34659d] dark:to-[#ADADAD] dark:via-50%;
-}
-
-:root {
-  color: black;
-  color-scheme: light dark;
-  --color-gridBackground: #c8b7b72c;
 }
