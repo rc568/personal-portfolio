@@ -19,20 +19,22 @@ const {
 
 {
     show && (
-        <article class="animate-appear flex flex-col overflow-clip rounded-2xl bg-gradient-to-r from-cyan-600 via-85% to-green-300">
-            <Image
-                class="aspect-video w-full bg-stone-300 object-cover object-left-top"
-                src={urlImage}
-                alt={`foto portada de ${title}`}
-                width="880"
-                height="495"
-            />
-            <div class="flex grow flex-col justify-between gap-2 px-6 py-4 max-lg:px-4">
+        <article class="animate-appear flex flex-col overflow-clip rounded-3xl bg-gradient-to-r from-cyan-600 via-85% to-green-300 shadow-md backdrop-blur-md transition-all delay-75 duration-500 hover:shadow-lg">
+            <div class="overflow-hidden">
+                <Image
+                    class="aspect-video w-full object-cover object-left-top transition-transform duration-500 hover:scale-105"
+                    src={urlImage}
+                    alt={`foto portada de ${title}`}
+                    width="880"
+                    height="495"
+                />
+            </div>
+            <div class="m-4 flex grow flex-col justify-between gap-2 text-slate-700 lg:px-6">
                 <div>
                     <div class="flex items-center justify-between">
-                        <h3 class="dark:text-teal-50">{title}</h3>
+                        <h3 class="font-bold">{title}</h3>
                         <a
-                            class="w-7"
+                            class="w-7 transition-colors duration-300 hover:text-lime-700"
                             href={href}
                             target="_blank"
                             rel="noreferrer noopener"
@@ -41,13 +43,16 @@ const {
                         </a>
                     </div>
                     <p
-                        class="py-4 text-slate-800"
+                        class="my-3 text-sm leading-relaxed"
                         set:html={lineBreakFormatter(description)}
                     />
                 </div>
                 <div>
-                    <p class="dark:text-teal-50">Tecnologías usadas:</p>
-                    <div class="flex gap-2 pt-2">
+                    <span class="text-sm font-semibold">Tecnologías:</span>
+                    <div
+                        id="stack-container"
+                        class="flex gap-2 overflow-x-auto pt-2 whitespace-nowrap lg:flex-wrap lg:overflow-x-visible"
+                    >
                         {technologies.map((tech) => (
                             <Chip text={tech} />
                         ))}
@@ -58,6 +63,13 @@ const {
     )
 }
 
-<!-- from-[#DDCC7A] via-[#E5C16D] to-[#D1DF8F] from-10% via-75% -->
-<!-- E4B55D -->
-<!-- bg-gradient-to-r from-[#E4B55D] to-[#757354] from-0% to-260% -->
+<style>
+    #stack-container {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    #stack-container::-webkit-scrollbar {
+        display: none;
+    }
+</style>
