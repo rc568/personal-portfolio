@@ -3,11 +3,15 @@ import Moon from "@icons/moon.svg?raw";
 import Sun from "@icons/sun.svg?raw";
 ---
 
-<div id="toggle" class="flex gap-2 cursor-pointer max-lg:gap-5">
-    <button class="w-9 p-2 cursor-pointer transition-colors duration-300 rounded-full hover:bg-gray-900/20 dark:opacity-30 dark:hover:bg-transparent dark:cursor-auto max-lg:dark:hidden max-lg:p-0 max-lg:w-6">
+<div id="toggle" class="flex cursor-pointer gap-2 max-lg:gap-5">
+    <button
+        class="w-9 cursor-pointer rounded-full p-2 transition-colors duration-300 hover:bg-gray-900/20 max-lg:w-6 max-lg:p-0 dark:cursor-auto dark:opacity-30 dark:hover:bg-transparent max-lg:dark:hidden"
+    >
         <Fragment set:html={Moon} />
     </button>
-    <button class="w-9 p-2 opacity-30 hover:bg-none rounded-full transition-colors duration-300 dark:block dark:opacity-100 dark:hover:bg-gray-900/20 dark:cursor-pointer max-lg:p-0 max-lg:w-6 max-lg:dark:block max-lg:hidden">
+    <button
+        class="w-9 rounded-full p-2 opacity-30 transition-colors duration-300 hover:bg-none max-lg:hidden max-lg:w-6 max-lg:p-0 dark:block dark:cursor-pointer dark:opacity-100 dark:hover:bg-gray-900/20 max-lg:dark:block"
+    >
         <Fragment set:html={Sun} />
     </button>
     <span class="sr-only"></span>
@@ -15,30 +19,34 @@ import Sun from "@icons/sun.svg?raw";
 
 <script>
     const updatedThemePreference = () => {
-        document.documentElement.classList.toggle('dark', colorSchemePreference.matches)
-    }
+        document.documentElement.classList.toggle(
+            "dark",
+            colorSchemePreference.matches
+        );
+    };
 
     const handleClick = () => {
-        const localTheme = localStorage.getItem('theme')
+        const localTheme = localStorage.getItem("theme");
 
-        let newTheme
+        let newTheme;
         if (!localTheme) {
-            newTheme = colorSchemePreference.matches ? 'light' : 'dark'
+            newTheme = colorSchemePreference.matches ? "light" : "dark";
         } else {
-            newTheme = localTheme === 'dark' ? 'light' : 'dark'
+            newTheme = localTheme === "dark" ? "light" : "dark";
         }
 
-        document.documentElement.classList.toggle('dark')
-        localStorage.setItem('theme', newTheme)
-    }
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", newTheme);
+    };
 
     // Adding a Listener con the colorSchemePreference
-    const colorSchemePreference = window.matchMedia("(prefers-color-scheme: dark)")
-    colorSchemePreference.addEventListener('change', updatedThemePreference)
-    
-    const toggleThemeButtons = document.querySelectorAll('#toggle')
-    toggleThemeButtons.forEach(toggleButton => {
-        toggleButton.addEventListener('click', handleClick)
-    });
+    const colorSchemePreference = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    );
+    colorSchemePreference.addEventListener("change", updatedThemePreference);
 
+    const toggleThemeButtons = document.querySelectorAll("#toggle");
+    toggleThemeButtons.forEach((toggleButton) => {
+        toggleButton.addEventListener("click", handleClick);
+    });
 </script>

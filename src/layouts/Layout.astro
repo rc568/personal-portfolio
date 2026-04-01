@@ -1,53 +1,51 @@
 ---
 import "../styles/global.css";
 import "@fontsource-variable/josefin-sans";
-import '@fontsource-variable/lexend';
-import '@fontsource-variable/mona-sans';
+import "@fontsource-variable/lexend";
+import "@fontsource-variable/mona-sans";
 import Header from "../components/Header/Header.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/icon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portafolio Isaac Rojas</title>
-	</head>
-	<body class="font-mona text-foreground main-gradient">
-		<Header />
-		<div class="fixed top-0 left-0 h-full max-w-full -z-10 container"></div>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/icon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Portafolio Isaac Rojas</title>
+    </head>
+    <body class="font-mona text-foreground main-gradient">
+        <Header />
+        <div class="fixed top-0 left-0 -z-10 container h-full max-w-full"></div>
+        <slot />
+    </body>
 </html>
 
 <style>
-	.container {
-		background-size: 20px 20px;
-		background-image: linear-gradient(
-				to right,
-				var(--grid-color) 1px,
-				transparent 1px
-			),
-			linear-gradient(
-				to bottom,
-				var(--grid-color) 1px,
-				transparent 1px
-			);
-	}
+    .container {
+        background-size: 20px 20px;
+        background-image:
+            linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    }
 
-	html {
-		scroll-behavior: smooth;
-	}
+    html {
+        scroll-behavior: smooth;
+    }
 </style>
 
 <script is:inline>
-	const getThemePreference = () => {
-		const localPreference = localStorage.getItem("theme")
-		if (localPreference) return localPreference
-		return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-	}
+    const getThemePreference = () => {
+        const localPreference = localStorage.getItem("theme");
+        if (localPreference) return localPreference;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    };
 
-	document.documentElement.classList.toggle('dark', getThemePreference() === 'dark')
+    document.documentElement.classList.toggle(
+        "dark",
+        getThemePreference() === "dark"
+    );
 </script>

@@ -1,16 +1,23 @@
-<div class="min-h-screen flex flex-col justify-center gap-4 max-lg:py-20 animate-appear" id="about">
+<div
+    class="animate-appear flex min-h-screen flex-col justify-center gap-4 max-lg:py-20"
+    id="about"
+>
     <h2>Sobre mí</h2>
-    <div class="[&>p]:text-base [&>p]:lg:text-lg text-foreground flex flex-col gap-4">
+    <div
+        class="text-foreground flex flex-col gap-4 [&>p]:text-base [&>p]:lg:text-lg"
+    >
+        <p>Vivo en Lima, Perú.</p>
         <p>
-            Vivo en Lima, Perú.
-        </p>
-        <p> 
-            Soy bachiller en Ingeniería Electrónica y actualmente me dedico al desarrollo de aplicaciones <span class="font-medium text-slate-900 dark:text-white">Web Full Stack</span>.
-        </p>
-        </p>
-        <p>
-            Tengo conocimientos de diseño, los cuáles me gusta aplicarlos a los proyectos que realizo.
+            Soy bachiller en Ingeniería Electrónica y actualmente me dedico al
+            desarrollo de aplicaciones
+            <span class="font-medium text-slate-900 dark:text-white">
+                Web Full Stack
+            </span>
         </p>
     </div>
-    <slot />
+    <p>
+        Tengo conocimientos de diseño, los cuáles me gusta aplicarlos a los
+        proyectos que realizo.
+    </p>
 </div>
+<slot />

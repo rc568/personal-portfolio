@@ -1,16 +1,17 @@
 ---
+
 ---
 
-<footer class="w-fit mx-auto text-sm lg:text-base pt-8">
-    © <span id="year">2025</span> -  irojas.dev
+<footer class="mx-auto w-fit pt-8 text-sm lg:text-base">
+    © <span id="year">2025</span> - irojas.dev
 </footer>
 
 <script is:inline>
     const spanYear = document.getElementById("year");
-    const currentYear = new Intl.DateTimeFormat('es-PE', {
-        year: 'numeric',
-        timeZone: 'America/Lima'
+    const currentYear = new Intl.DateTimeFormat("es-PE", {
+        year: "numeric",
+        timeZone: "America/Lima"
     }).format(new Date());
 
-    spanYear.innerText = currentYear
+    spanYear.innerText = currentYear;
 </script>
