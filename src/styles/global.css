@@ -21,8 +21,7 @@
 html.dark {
     --site-bg-from: 0 0% 12%;
     --site-bg-via: 212 50% 41%;
-    --site-bg-to: 0 0% 10%;
-    --site-bg-to: 0 0% 68%;
+    --site-bg-to: 0 0% 15%;
 
     --background: 0 0% 100%;
     --foreground: 211 55% 87%;
@@ -46,11 +45,6 @@ html.dark {
     --font-lexend: "Lexend Variable";
     --font-mona: "Mona Sans Variable";
 
-    --color-background: hsl(var(--background));
-    --color-foreground: hsl(var(--foreground));
-    --color-accent: hsl(var(--accent));
-    --color-accent-foreground: hsl(var(--accent-foreground));
-
     --animate-appear: appear ease-out;
 
     @keyframes appear {
@@ -64,6 +58,13 @@ html.dark {
             transform: scale(1) translateX(0px);
         }
     }
+}
+
+@theme inline {
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+    --color-accent: hsl(var(--accent));
+    --color-accent-foreground: hsl(var(--accent-foreground));
 }
 
 @layer base {
