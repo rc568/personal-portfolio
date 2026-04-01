@@ -7,46 +7,57 @@ import Chip from "../Common/Chip.astro";
 
 type Props = Project;
 
-const { title, description, technologies, show = true, href, urlImage } = Astro.props;
+const {
+    title,
+    description,
+    technologies,
+    show = true,
+    href,
+    urlImage
+} = Astro.props;
 ---
 
 {
-  show && (
-    <article class="rounded-2xl overflow-clip bg-gradient-to-r from-cyan-600 to-green-300 via-85% flex flex-col animate-appear">
-      <Image
-        class="w-full aspect-video bg-stone-300 object-cover object-left-top"
-        src={urlImage}
-        alt={`foto portada de ${title}`}
-        width="880"
-        height="495"
-      />
-      <div class="flex flex-col justify-between px-6 py-4 gap-2 grow max-lg:px-4">
-        <div>
-          <div class="flex justify-between items-center">
-            <h3 class="dark:text-teal-50">{title}</h3>
-            <a class="w-7" href={href} target="_blank" rel="noreferrer noopener">
-              <Fragment set:html={Redirect} />
-            </a>
-          </div>
-          <p
-            class="text-slate-800 py-4"
-            set:html={lineBreakFormatter(description)}
-          />
-        </div>
-        <div>
-          <p class="dark:text-teal-50">Tecnologías usadas:</p>
-          <div class="flex gap-2 pt-2">
-            {technologies.map((tech) => (
-              <Chip text={tech} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </article>
-  )
+    show && (
+        <article class="animate-appear flex flex-col overflow-clip rounded-2xl bg-gradient-to-r from-cyan-600 via-85% to-green-300">
+            <Image
+                class="aspect-video w-full bg-stone-300 object-cover object-left-top"
+                src={urlImage}
+                alt={`foto portada de ${title}`}
+                width="880"
+                height="495"
+            />
+            <div class="flex grow flex-col justify-between gap-2 px-6 py-4 max-lg:px-4">
+                <div>
+                    <div class="flex items-center justify-between">
+                        <h3 class="dark:text-teal-50">{title}</h3>
+                        <a
+                            class="w-7"
+                            href={href}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <Fragment set:html={Redirect} />
+                        </a>
+                    </div>
+                    <p
+                        class="py-4 text-slate-800"
+                        set:html={lineBreakFormatter(description)}
+                    />
+                </div>
+                <div>
+                    <p class="dark:text-teal-50">Tecnologías usadas:</p>
+                    <div class="flex gap-2 pt-2">
+                        {technologies.map((tech) => (
+                            <Chip text={tech} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </article>
+    )
 }
 
 <!-- from-[#DDCC7A] via-[#E5C16D] to-[#D1DF8F] from-10% via-75% -->
 <!-- E4B55D -->
 <!-- bg-gradient-to-r from-[#E4B55D] to-[#757354] from-0% to-260% -->
-

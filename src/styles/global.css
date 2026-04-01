@@ -2,97 +2,97 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  color-scheme: light dark;
+    color-scheme: light dark;
 
-  --site-bg-from: 0 0% 100%;
-  --site-bg-via: 205 58% 69%;
-  --site-bg-to: 0 0% 68%;
+    --site-bg-from: 0 0% 100%;
+    --site-bg-via: 205 58% 69%;
+    --site-bg-to: 0 0% 68%;
 
-  --background: 0 0% 100%;
-  --foreground: 0 0% 20%;
-  --accent: 233 78% 51%;
-  --accent-foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    --accent: 233 78% 51%;
+    --accent-foreground: 0 0% 100%;
 
-  --grid-hsl: 0 13% 75%;
-  --grid-opacity: 0.173;
-  --grid-color: hsl(var(--grid-hsl) / var(--grid-opacity));
+    --grid-hsl: 0 13% 75%;
+    --grid-opacity: 0.173;
+    --grid-color: hsl(var(--grid-hsl) / var(--grid-opacity));
 }
 
 html.dark {
-  --site-bg-from: 0 0% 12%;
-  --site-bg-via: 212 50% 41%;
-  --site-bg-to: 0 0% 10%;
-  --site-bg-to: 0 0% 68%;
+    --site-bg-from: 0 0% 12%;
+    --site-bg-via: 212 50% 41%;
+    --site-bg-to: 0 0% 10%;
+    --site-bg-to: 0 0% 68%;
 
-  --background: 0 0% 100%;
-  --foreground: 211 55% 87%;
-  --accent: 233 78% 51%;
-  --accent-foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 211 55% 87%;
+    --accent: 233 78% 51%;
+    --accent-foreground: 0 0% 100%;
 
-  --grid-opacity: 0.055;
+    --grid-opacity: 0.055;
 }
 
 .main-gradient {
-  background: linear-gradient(
-    to bottom right,
-    hsl(var(--site-bg-from)),
-    hsl(var(--site-bg-via)) 50%,
-    hsl(var(--site-bg-to))
-  );
+    background: linear-gradient(
+        to bottom right,
+        hsl(var(--site-bg-from)),
+        hsl(var(--site-bg-via)) 50%,
+        hsl(var(--site-bg-to))
+    );
 }
 
 @theme {
-  --font-josefin: "Josefin Sans Variable";
-  --font-lexend: "Lexend Variable";
-  --font-mona: "Mona Sans Variable";
+    --font-josefin: "Josefin Sans Variable";
+    --font-lexend: "Lexend Variable";
+    --font-mona: "Mona Sans Variable";
 
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+    --color-accent: hsl(var(--accent));
+    --color-accent-foreground: hsl(var(--accent-foreground));
 
-  --animate-appear: appear ease-out;
+    --animate-appear: appear ease-out;
 
-  @keyframes appear {
-    from {
-      opacity: 0;
-      transform: scale(0.75) translateX(100%);
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: scale(0.75) translateX(100%);
+        }
+        to {
+            opacity: 1;
+            scale: 1;
+            transform: scale(1) translateX(0px);
+        }
     }
-    to {
-      opacity: 1;
-      scale: 1;
-      transform: scale(1) translateX(0px);
-    }
-  }
 }
 
 @layer base {
-  h1 {
-    @apply text-6xl lg:text-8xl tracking-wide font-medium;
-  }
-  h2 {
-    @apply text-xl lg:text-3xl tracking-wide font-medium;
-  }
-  h3 {
-    @apply text-base lg:text-lg tracking-wide font-normal;
-  }
-  p {
-    @apply text-sm lg:text-base leading-6 font-normal; 
-  }
+    h1 {
+        @apply text-6xl font-medium tracking-wide lg:text-8xl;
+    }
+    h2 {
+        @apply text-xl font-medium tracking-wide lg:text-3xl;
+    }
+    h3 {
+        @apply text-base font-normal tracking-wide lg:text-lg;
+    }
+    p {
+        @apply text-sm leading-6 font-normal lg:text-base;
+    }
 }
 
-@layer utilities {
-  @supports (animation-timeline: view()) {
-    .animate-appear {
-      animation-timeline: view();
-      animation-range: entry 5% cover 45%;
+@layer utilities {
+    @supports (animation-timeline: view()) {
+        .animate-appear {
+            animation-timeline: view();
+            animation-range: entry 5% cover 45%;
+        }
     }
-  }
 
-  @media (max-width: 767px) {
-    .animate-appear {
-      animation-timeline: view();
-      animation-range: entry 5% cover 35%;
+    @media (max-width: 767px) {
+        .animate-appear {
+            animation-timeline: view();
+            animation-range: entry 5% cover 35%;
+        }
     }
-  }
 }

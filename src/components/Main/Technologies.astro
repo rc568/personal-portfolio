@@ -7,13 +7,17 @@ import Chip from "../Common/Chip.astro";
     <h2>Tecnologías</h2>
     {
         technologies.map((technology) => {
-            return technology.show && (
-                <section>
-                    <h3 class="pb-2">{technology.title}</h3>
-                    <div class="flex gap-3 flex-wrap">
-                        {technology.technologies.map(tech => <Chip text={tech} />)}
-                    </div>
-                </section>
+            return (
+                technology.show && (
+                    <section>
+                        <h3 class="pb-2">{technology.title}</h3>
+                        <div class="flex flex-wrap gap-3">
+                            {technology.technologies.map((tech) => (
+                                <Chip text={tech} />
+                            ))}
+                        </div>
+                    </section>
+                )
             );
         })
     }

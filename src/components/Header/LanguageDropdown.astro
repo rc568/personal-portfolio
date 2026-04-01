@@ -3,8 +3,12 @@ import Arrow from "@icons/arrow.svg?raw";
 ---
 
 <div class="w-fit">
-    <button class="relative flex gap-4 cursor-pointer max-lg:gap-2" id="dropdownLanguageButton">
-        <span class="pr-2 max-lg:hidden">Idioma:
+    <button
+        class="relative flex cursor-pointer gap-4 max-lg:gap-2"
+        id="dropdownLanguageButton"
+    >
+        <span class="pr-2 max-lg:hidden"
+            >Idioma:
             <span id="language" class="pl-2">Español</span>
         </span>
         <span class="hidden max-lg:block">EN</span>
@@ -12,27 +16,35 @@ import Arrow from "@icons/arrow.svg?raw";
             <Fragment set:html={Arrow} />
         </div>
     </button>
-    <div id="dropdownLanguage" class="absolute right-0 z-50 hidden max-lg:top-12 max-lg:right-3">
-        <ul class="bg-stone-100/15 rounded-xl overflow-clip max-lg:bg-[#a1cceb] dark:max-lg:bg-[#34659d]" aria-labelledby="dropdown menu">
+    <div
+        id="dropdownLanguage"
+        class="absolute right-0 z-50 hidden max-lg:top-12 max-lg:right-3"
+    >
+        <ul
+            class="overflow-clip rounded-xl bg-stone-100/15 max-lg:bg-[#a1cceb] dark:max-lg:bg-[#34659d]"
+            aria-labelledby="dropdown menu"
+        >
             <li class="hover:bg-stone-200/20">
-                <button class="px-6 py-2 cursor-pointer">Español</button>
+                <button class="cursor-pointer px-6 py-2">Español</button>
             </li>
             <li class="hover:bg-stone-200/20">
-                <button class="px-6 py-2 cursor-pointer">Inglés</button>
+                <button class="cursor-pointer px-6 py-2">Inglés</button>
             </li>
         </ul>
     </div>
 </div>
-    
+
 <script>
-    const dropdownButtons = document.querySelectorAll("#dropdownLanguageButton")!;
+    const dropdownButtons = document.querySelectorAll(
+        "#dropdownLanguageButton"
+    )!;
     const dropdowns = document.querySelectorAll("#dropdownLanguage")!;
 
-    dropdownButtons.forEach(element => element.addEventListener("click", () => {
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.toggle("hidden");
-        });
-    }));
-
-
+    dropdownButtons.forEach((element) =>
+        element.addEventListener("click", () => {
+            dropdowns.forEach((dropdown) => {
+                dropdown.classList.toggle("hidden");
+            });
+        })
+    );
 </script>

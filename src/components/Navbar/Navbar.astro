@@ -3,20 +3,20 @@ import { navbar } from "../../utils/info";
 ---
 
 <nav class="">
-  <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-8">
-    {
-      navbar.map((nav) => {
-        return (
-          <li>
-            <a href={`#${nav.href}`}>
-              <div class="w-6 hidden max-lg:block">
-                <Fragment set:html={nav.icon} />
-              </div>
-              <span class="max-lg:hidden">{nav.title}</span>
-            </a>
-          </li>
-        );
-      })
-    }
-  </ul>
+    <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-8">
+        {
+            navbar.map((nav) => {
+                return (
+                    <li>
+                        <a href={`#${nav.href}`}>
+                            <div class="hidden w-6 max-lg:block">
+                                <Fragment set:html={nav.icon} />
+                            </div>
+                            <span class="max-lg:hidden">{nav.title}</span>
+                        </a>
+                    </li>
+                );
+            })
+        }
+    </ul>
 </nav>
