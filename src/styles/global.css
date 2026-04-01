@@ -8,27 +8,36 @@
     --site-bg-via: 205 58% 69%;
     --site-bg-to: 0 0% 68%;
 
+    --card-bg: 210 50% 100% / 0.2;
+    --card-border: 0 0% 100% / 0.45;
+
     --background: 0 0% 100%;
     --foreground: 0 0% 20%;
-    --accent: 233 78% 51%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 231 78% 52%;
+    --accent-foreground: 210 30% 90%;
+    --accent-text: 233 78% 40%;
 
     --grid-hsl: 0 13% 75%;
-    --grid-opacity: 0.173;
+    --grid-opacity: 0.18;
     --grid-color: hsl(var(--grid-hsl) / var(--grid-opacity));
 }
 
 html.dark {
-    --site-bg-from: 0 0% 12%;
-    --site-bg-via: 212 50% 41%;
-    --site-bg-to: 0 0% 15%;
+    --site-bg-from: 18 7% 44%;
+    --site-bg-via: 212 45% 25%;
+    --site-bg-to: 200 50% 15%;
 
-    --background: 0 0% 100%;
-    --foreground: 211 55% 87%;
-    --accent: 233 78% 51%;
+    --card-bg: 210 18% 22% / 0.15;
+    --card-border: 210 40% 65% / 0.25;
+
+    --background: 210 18% 14%;
+    --foreground: 210 20% 88%;
+    --accent: 233 65% 63%;
+    --accent-text: 215 80% 75%;
     --accent-foreground: 0 0% 100%;
 
-    --grid-opacity: 0.055;
+    --grid-hsl: 0 20% 65%;
+    --grid-opacity: 0.035;
 }
 
 .main-gradient {
@@ -36,7 +45,7 @@ html.dark {
         to bottom right,
         hsl(var(--site-bg-from)),
         hsl(var(--site-bg-via)) 50%,
-        hsl(var(--site-bg-to))
+        hsl(var(--site-bg-to)) 90%
     );
 }
 
@@ -65,6 +74,9 @@ html.dark {
     --color-foreground: hsl(var(--foreground));
     --color-accent: hsl(var(--accent));
     --color-accent-foreground: hsl(var(--accent-foreground));
+    --color-accent-text: hsl(var(--accent-text));
+    --color-card-bg: hsl(var(--card-bg));
+    --color-card-border: hsl(var(--card-border));
 }
 
 @layer base {
