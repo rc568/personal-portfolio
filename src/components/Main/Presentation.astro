@@ -3,9 +3,7 @@
     id="home"
 >
     <span>Hola, soy</span>
-    <h1
-        class="font-lexend bg-gradient-to-br from-cyan-600 via-green-500 to-cyan-600 bg-clip-text pb-1 text-transparent"
-    >
+    <h1 class="font-lexend pb-3 font-bold">
         Isaac
         <br />
         Rojas
@@ -19,21 +17,35 @@
 
 <style>
     h1 {
-        object-fit: fill;
-        background-size: 400% 400%;
-        animation: background-move 6s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-            infinite;
+        background: linear-gradient(
+            var(--h1-angle, 135deg),
+            hsl(var(--h1-grad-from)),
+            hsl(var(--h1-grad-to))
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: angle-shift 6s ease-in-out infinite alternate;
     }
 
-    @keyframes background-move {
+    @keyframes angle-shift {
         0% {
-            background-position: 0%;
+            --h1-angle: 5deg;
         }
-        50% {
-            background-position: 80% 80%;
+        45% {
+            --h1-angle: 365deg;
+        }
+        75% {
+            --h1-angle: 100deg;
         }
         100% {
-            background-position: 100% 100%;
+            --h1-angle: 365deg;
         }
+    }
+
+    @property --h1-angle {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 5deg;
     }
 </style>

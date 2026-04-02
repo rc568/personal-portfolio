@@ -3,18 +3,18 @@ import Moon from "@icons/moon.svg?raw";
 import Sun from "@icons/sun.svg?raw";
 ---
 
-<div id="toggle" class="flex cursor-pointer gap-2 max-lg:gap-5">
+<div id="toggle" class="flex cursor-pointer lg:gap-2">
     <button
-        class="w-9 cursor-pointer rounded-full p-2 transition-colors duration-300 hover:bg-gray-900/20 max-lg:w-6 max-lg:p-0 dark:cursor-auto dark:opacity-30 dark:hover:bg-transparent max-lg:dark:hidden"
+        class="hover:text-accent/80 w-6 cursor-pointer rounded-full p-0 transition-colors duration-300 lg:w-9 lg:p-2 dark:hidden dark:cursor-auto dark:opacity-30 dark:hover:bg-transparent lg:dark:block"
     >
         <Fragment set:html={Moon} />
     </button>
     <button
-        class="w-9 rounded-full p-2 opacity-30 transition-colors duration-300 hover:bg-none max-lg:hidden max-lg:w-6 max-lg:p-0 dark:block dark:cursor-pointer dark:opacity-100 dark:hover:bg-gray-900/20 max-lg:dark:block"
+        class="dark:hover:text-accent/80 hidden w-6 rounded-full p-0 opacity-30 transition-colors duration-300 hover:bg-none lg:block lg:w-9 lg:p-2 dark:block dark:cursor-pointer dark:opacity-100"
     >
         <Fragment set:html={Sun} />
     </button>
-    <span class="sr-only"></span>
+    <span class="sr-only">Theme toogle</span>
 </div>
 
 <script>

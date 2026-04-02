@@ -2,17 +2,17 @@
 import { navbar } from "../../utils/info";
 ---
 
-<nav class="">
-    <ul class="flex gap-6 max-lg:flex-row max-lg:justify-evenly max-lg:gap-8">
+<nav>
+    <ul class="flex flex-row gap-7">
         {
             navbar.map((nav) => {
                 return (
-                    <li>
-                        <a href={`#${nav.href}`}>
-                            <div class="hidden w-6 max-lg:block">
+                    <li class="group relative lg:overflow-auto lg:rounded-2xl lg:px-3 lg:py-1">
+                        <a href={`#${nav.href}`} class="p-0">
+                            <div class="w-6 lg:hidden">
                                 <Fragment set:html={nav.icon} />
-                            </div>
-                            <span class="max-lg:hidden">{nav.title}</span>
+                            </div>{" "}
+                            <span class="hidden lg:block">{nav.title}</span>
                         </a>
                     </li>
                 );
@@ -20,3 +20,56 @@ import { navbar } from "../../utils/info";
         }
     </ul>
 </nav>
+
+<style>
+    li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        padding: 1.15rem;
+        aspect-ratio: 1 / 1;
+        background-color: hsl(var(--accent));
+        opacity: 75%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.4s ease-out 50ms;
+        z-index: -1;
+    }
+
+    li a {
+        transition: color 0s;
+    }
+
+    @media (hover: hover) {
+        li:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        li:hover a {
+            color: hsl(var(--accent-foreground));
+            transition: color 0.4s ease-out 50ms;
+        }
+    }
+
+    @media (hover: none) {
+        li::before {
+            border-radius: 100%;
+            transition: transform 0.1s ease-out 50ms;
+        }
+
+        li:active::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        li:active a {
+            color: hsl(var(--accent-foreground));
+            transition: color 0.4s ease-out 50ms;
+        }
+    }
+
+    li:focus-within::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+</style>
