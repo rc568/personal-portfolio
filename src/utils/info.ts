@@ -7,13 +7,14 @@ import User from "@icons/user.svg?raw";
 import type { Article, NavBar, Project, Technologies } from "../interfaces";
 
 export const education: Article[] = [
-    // {
-    //   title: "Net 9 & Angular 19 Developer",
-    //   dateRange: "Ene 2025 - Mar 2025",
-    //   place: "Galaxy Training",
-    //   description:
-    //     "Curso Fullstack de 48 horas.\\nEn el backend se desarolló Minimal APIs con .NET9 y en el frontend la interfaz de usuario utilizando Angular.",
-    // },
+    {
+        title: "AWS Practitionar and Associate",
+        dateRange: "Ago 2025 - Nov 2025",
+        place: "Galaxy Training",
+        description:
+            "Curso diseñado como preparación para obtener la certificación AWS Certified Solutions Architect Associate."
+    },
+
     {
         title: "UX & UI Designer: Diseño de experiencia de usuario",
         dateRange: "Jun 2024 - Sep 2024",
@@ -23,7 +24,7 @@ export const education: Article[] = [
     },
     {
         title: "Bachiller en Ingeniería Electrónica",
-        dateRange: "2015 - 2020",
+        dateRange: "Mar 2015 - Ene 2021",
         place: "Universidad Nacional de Ingeniería"
     }
 ] as const;
@@ -85,23 +86,25 @@ export const projects: Project[] = [
 export const technologies: Technologies[] = [
     {
         title: "Frontend",
-        technologies: ["React", "Astro", "Tailwind"],
+        technologies: [
+            "Javascript",
+            "Typescript",
+            "React",
+            "Astro",
+            "Next.js",
+            "Tailwind",
+            "Figma"
+        ],
         show: true
     },
     {
         title: "Backend",
-        technologies: ["Nodejs", "Typescript"],
+        technologies: ["Node.js", "express", "SQL"],
         show: true
     },
     {
         title: "Herramientas",
-        technologies: [
-            "Git",
-            "Github",
-            "Docker",
-            "Figma",
-            "Herramientas de IA"
-        ],
+        technologies: ["Git", "Github", "Docker", "AWS", "Herramientas de IA"],
         show: true
     }
 ] as const;
