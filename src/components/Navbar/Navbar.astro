@@ -7,12 +7,12 @@ import { navbar } from "../../utils/info";
         {
             navbar.map((nav) => {
                 return (
-                    <li class="group relative lg:overflow-auto lg:rounded-2xl lg:px-3 lg:py-1">
+                    <li class="group relative md:overflow-auto md:rounded-2xl md:px-3 md:py-1">
                         <a href={`#${nav.href}`} class="p-0">
-                            <div class="w-6 lg:hidden">
+                            <div class="w-6 md:hidden">
                                 <Fragment set:html={nav.icon} />
                             </div>{" "}
-                            <span class="hidden lg:block">{nav.title}</span>
+                            <span class="hidden md:block">{nav.title}</span>
                         </a>
                     </li>
                 );

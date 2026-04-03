@@ -3,14 +3,14 @@ import Moon from "@icons/moon.svg?raw";
 import Sun from "@icons/sun.svg?raw";
 ---
 
-<div id="toggle" class="flex cursor-pointer lg:gap-2">
+<div id="toggle" class="flex cursor-pointer md:gap-2">
     <button
-        class="hover:text-accent/80 w-6 cursor-pointer rounded-full p-0 transition-colors duration-300 lg:w-9 lg:p-2 dark:hidden dark:cursor-auto dark:opacity-30 dark:hover:bg-transparent lg:dark:block"
+        class="hover:text-accent/80 w-6 cursor-pointer rounded-full p-0 transition-colors duration-300 md:w-9 md:p-2 dark:hidden dark:cursor-auto dark:opacity-30 dark:hover:bg-transparent md:dark:block"
     >
         <Fragment set:html={Moon} />
     </button>
     <button
-        class="dark:hover:text-accent/80 hidden w-6 rounded-full p-0 opacity-30 transition-colors duration-300 hover:bg-none lg:block lg:w-9 lg:p-2 dark:block dark:cursor-pointer dark:opacity-100"
+        class="dark:hover:text-accent/80 hidden w-6 rounded-full p-0 opacity-30 transition-colors duration-300 hover:bg-none md:block md:w-9 md:p-2 dark:block dark:cursor-pointer dark:opacity-100"
     >
         <Fragment set:html={Sun} />
     </button>

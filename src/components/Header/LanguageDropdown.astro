@@ -4,24 +4,24 @@ import Arrow from "@icons/arrow.svg?raw";
 
 <div class="w-fit">
     <button
-        class="relative flex cursor-pointer gap-4 max-lg:gap-2"
+        class="relative flex cursor-pointer gap-4 max-md:gap-2"
         id="dropdownLanguageButton"
     >
-        <span class="pr-2 max-lg:hidden"
+        <span class="pr-2 max-md:hidden"
             >Idioma:
             <span id="language" class="pl-2">Español</span>
         </span>
-        <span class="hidden max-lg:block">EN</span>
-        <div class="w-4 self-center max-lg:w-3">
+        <span class="hidden max-md:block">EN</span>
+        <div class="w-4 self-center max-md:w-3">
             <Fragment set:html={Arrow} />
         </div>
     </button>
     <div
         id="dropdownLanguage"
-        class="absolute right-0 z-50 hidden max-lg:top-12 max-lg:right-3"
+        class="absolute right-0 z-50 hidden max-md:top-12 max-md:right-3"
     >
         <ul
-            class="overflow-clip rounded-xl bg-stone-100/15 max-lg:bg-[#a1cceb] dark:max-lg:bg-[#34659d]"
+            class="overflow-clip rounded-xl bg-stone-100/15 max-md:bg-[#a1cceb] dark:max-md:bg-[#34659d]"
             aria-labelledby="dropdown menu"
         >
             <li class="hover:bg-stone-200/20">
